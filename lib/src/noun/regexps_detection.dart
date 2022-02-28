@@ -1,6 +1,6 @@
 part of grammer;
 
-final singularPatterns = <RegExp>[
+final _singularPatterns = <RegExp>[
   RegExp(r'[bcdfgjkmruopquvxzw]$'),
   RegExp(r'ss$'),
   RegExp(r'sis$'),
@@ -39,7 +39,7 @@ final singularPatterns = <RegExp>[
   RegExp(r'[^e]n$'),
 ];
 
-final pluralPatterns = [
+final _pluralPatterns = [
   RegExp(r'men$'),
   RegExp(r'sortia$'),
   RegExp(r'^media$'),

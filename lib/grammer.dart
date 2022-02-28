@@ -1,7 +1,9 @@
 library grammer;
 
+// external library import
 import 'package:stemmer/stemmer.dart';
 
+// src
 part 'src/grammer_base.dart';
 
 // Adjectives

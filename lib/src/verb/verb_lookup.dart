@@ -3,7 +3,7 @@ part of grammer;
 // ignore_for_file: non_constant_identifier_names
 const _index = ['VBP', 'VBD', 'VBN', 'VBZ', 'VBG'];
 
-const verbIrregular = [
+const _verbIrregular = [
   ['abhor', 'abhorred', 'abhorred', 'abhors', 'abhorring'],
   ['abide', 'abode', 'abode', 'abides', 'abiding'],
   ['acquit', 'acquitted', 'acquitted', 'acquits', 'acquitting'],
@@ -5585,32 +5585,32 @@ const verbRegular = [
 
 class VerbLookup {
   static VerbLookup? _instance;
-  final VBP = <String, List<String>>{};
-  final VBD = <String, List<String>>{};
-  final VBN = <String, List<String>>{};
-  final VBZ = <String, List<String>>{};
-  final VBG = <String, List<String>>{};
+  final _VBP = <String, List<String>>{};
+  final _VBD = <String, List<String>>{};
+  final _VBN = <String, List<String>>{};
+  final _VBZ = <String, List<String>>{};
+  final _VBG = <String, List<String>>{};
 
   VerbLookup._() {
-    for (var entry in verbIrregular) {
+    for (var entry in _verbIrregular) {
       // Setting VBP
-      VBP[entry[0]] = entry;
+      _VBP[entry[0]] = entry;
 
       if (1 < entry.length) {
         // Setting VBD
-        VBD[entry[1]] = entry;
+        _VBD[entry[1]] = entry;
       }
       if (2 < entry.length) {
         // Setting VBN
-        VBN[entry[2]] = entry;
+        _VBN[entry[2]] = entry;
       }
       if (3 < entry.length) {
         // Setting VBZ
-        VBZ[entry[3]] = entry;
+        _VBZ[entry[3]] = entry;
       }
       if (4 < entry.length) {
         // Setting VBG
-        VBG[entry[4]] = entry;
+        _VBG[entry[4]] = entry;
       }
     }
 
@@ -5620,11 +5620,11 @@ class VerbLookup {
       String present3rd = solveVerbRegex(present, 'VBZ');
       String gerund = solveVerbRegex(present, 'VBG');
       final entry = <String>[present, past, pastParticiple, present3rd, gerund];
-      VBP[present] = entry;
-      VBD[past] = entry;
-      VBN[pastParticiple] = entry;
-      VBZ[present3rd] = entry;
-      VBG[gerund] = entry;
+      _VBP[present] = entry;
+      _VBD[past] = entry;
+      _VBN[pastParticiple] = entry;
+      _VBZ[present3rd] = entry;
+      _VBG[gerund] = entry;
     }
   }
 
@@ -5634,11 +5634,11 @@ class VerbLookup {
   }
 
   List<String> lookup(String input) {
-    return VBP[input] ??
-        VBD[input] ??
-        VBN[input] ??
-        VBZ[input] ??
-        VBG[input] ??
+    return _VBP[input] ??
+        _VBD[input] ??
+        _VBN[input] ??
+        _VBZ[input] ??
+        _VBG[input] ??
         <String>[];
   }
 

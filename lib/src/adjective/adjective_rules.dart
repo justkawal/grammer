@@ -69,7 +69,7 @@ class _AdjectiveRule7 extends _AdjectiveRules {
   String supr(String word) => word + 'est';
 }
 
-final adjectiveRules = <_AdjectiveRules>[
+final _adjectiveRules = <_AdjectiveRules>[
   _AdjectiveRule1(),
   _AdjectiveRule2(),
   _AdjectiveRule3(),

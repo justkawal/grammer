@@ -9,22 +9,22 @@ String _conjugate(String input, [String to = 'VBP']) {
     return lookup[toIndex];
   }
   // passed VBP => regex solution
-  else if (verbLookup.VBP[input] != null) {
+  else if (verbLookup._VBP[input] != null) {
     return solveVerbRegex(input, to);
   }
 
   // try to strip the verb
   // 'foreseeing' => 'seeing'
-  final stripped = strip(input);
+  final stripped = _strip(input);
   if (stripped != null) {
     // the stripping result is in the dictionary (doesn't have to be VBP)
     var lookupStripped = verbLookup.lookup(stripped);
     if (toIndex < lookupStripped.length) {
-      return rebuild(input, stripped, lookupStripped[toIndex]);
+      return _rebuild(input, stripped, lookupStripped[toIndex]);
     }
     // the stripped verb is in VBP form (we can apply regexes)
-    else if (verbLookup.VBP[stripped] != null) {
-      return rebuild(input, stripped, solveVerbRegex(input, to));
+    else if (verbLookup._VBP[stripped] != null) {
+      return _rebuild(input, stripped, solveVerbRegex(input, to));
     }
     // Note: we don't need to try to convert to VBP
     // since this step takes characters from the beginning
@@ -33,7 +33,7 @@ String _conjugate(String input, [String to = 'VBP']) {
   }
 
   // try to convert it to VBP form
-  var stem = defaultPresentVerbFunction(input);
+  String? stem = defaultPresentVerbFunction(input);
   if (stem != null) {
     final result = verbLookup.lookup(stem);
     return toIndex < result.length ? result[toIndex] : solveVerbRegex(stem, to);

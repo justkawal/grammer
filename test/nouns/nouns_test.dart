@@ -8,21 +8,23 @@ import 'singulars_plurals.dart';
 void main() {
   group('Common Singulars', () {
     for (var word in singularsTestList) {
-      test('Not Plural', () {
-        expect(Grammer(word).isPlural, false);
+      final grammer = Grammer(word);
+      test('Is not Plural', () {
+        expect(grammer.isPlural(), false);
       });
       test('Is Singular', () {
-        expect(Grammer(word).isSingular, true);
+        expect(grammer.isSingular(), true);
       });
     }
   });
   group('Common Plurals', () {
     for (var word in pluralTestList) {
+      final grammer = Grammer(word);
       test('Is Plural', () {
-        expect(Grammer(word).isPlural, true);
+        expect(grammer.isPlural(), true);
       });
-      test('Not Singular', () {
-        expect(Grammer(word).isSingular, false);
+      test('Is not Singular', () {
+        expect(grammer.isSingular(), false);
       });
     }
   });
@@ -30,17 +32,17 @@ void main() {
   group('Comparative list of singulars and plurals', () {
     group('Singular and Plural checking', () {
       for (var words in singularPluralTestList) {
-        test('isSingular: ${words[0]}', () {
-          expect(Grammer(words[0]).isSingular, true);
+        test('Singular: ${words[0]}', () {
+          expect(Grammer(words[0]).isSingular(), true);
         });
-        test('isSingular: ${words[1]}', () {
-          expect(Grammer(words[1]).isSingular, false);
+        test('Not Singular: ${words[1]}', () {
+          expect(Grammer(words[1]).isSingular(), false);
         });
-        test('isPlural: ${words[1]}', () {
-          expect(Grammer(words[1]).isPlural, true);
+        test('Plural: ${words[1]}', () {
+          expect(Grammer(words[1]).isPlural(), true);
         });
-        test('isPlural: ${words[0]}', () {
-          expect(Grammer(words[0]).isPlural, false);
+        test('Not Plural: ${words[0]}', () {
+          expect(Grammer(words[0]).isPlural(), false);
         });
       }
     });

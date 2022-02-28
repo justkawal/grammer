@@ -127,7 +127,7 @@ class _VerbRule9 extends _VerbRules {
   }
 }
 
-final rules = <_VerbRules>[
+final _verbRules = <_VerbRules>[
   _VerbRule1(),
   _VerbRule2(),
   _VerbRule3(),
@@ -140,7 +140,7 @@ final rules = <_VerbRules>[
 ];
 
 String solveVerbRegex(String input, String to) {
-  for (var rule in rules) {
+  for (var rule in _verbRules) {
     if (rule.test.hasMatch(input)) {
       return rule.transform(input, to);
     }

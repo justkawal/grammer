@@ -1,6 +1,6 @@
 part of grammer;
 
-final toPluralPattern = <Map<String, dynamic>>[
+final _toPluralPattern = <Map<String, dynamic>>[
   // appendix, spadix, radix
   {
     'regexp': RegExp(r'dix$'),

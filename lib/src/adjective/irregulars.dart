@@ -1,6 +1,6 @@
 part of grammer;
 
-const irregulars = <String, List<String>>{
+const _irregulars = <String, List<String>>{
   "bad": ["worse", "worst"],
   "far": ["further", "furthest"],
   "good": ["better", "best"],

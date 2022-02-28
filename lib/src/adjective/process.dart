@@ -1,10 +1,10 @@
 part of grammer;
 
 String _comparative(String word) {
-  if (irregulars[word] != null) {
-    return irregulars[word]![0];
+  if (_irregulars[word] != null) {
+    return _irregulars[word]![0];
   }
-  for (var adjectiveRule in adjectiveRules) {
+  for (var adjectiveRule in _adjectiveRules) {
     if (!adjectiveRule.test(word)) {
       continue;
     } else {
@@ -15,10 +15,10 @@ String _comparative(String word) {
 }
 
 String _superlative(String word) {
-  if (irregulars[word] != null) {
-    return irregulars[word]![1];
+  if (_irregulars[word] != null) {
+    return _irregulars[word]![1];
   }
-  for (var adjectiveRule in adjectiveRules) {
+  for (var adjectiveRule in _adjectiveRules) {
     if (!adjectiveRule.test(word)) {
       continue;
     } else {

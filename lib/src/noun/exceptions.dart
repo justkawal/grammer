@@ -1,8 +1,9 @@
 part of grammer;
+
 // ignore_for_file: unused_element
 
 class _Exceptions {
-  final singular2plural = <String, List<String>>{
+  final _singular2plural = <String, List<String>>{
     "abacus": ["abacuses"],
     "abyss": ["abysses"],
     "addendum": ["addenda"],
@@ -347,14 +348,14 @@ class _Exceptions {
     "zoo": ["zoos"],
   };
 
-  final plural2singular = <String, List<String>>{};
+  final _plural2singular = <String, List<String>>{};
   static _Exceptions? _instance;
 
   _Exceptions._() {
-    singular2plural.forEach((key, list) {
+    _singular2plural.forEach((key, list) {
       for (var value in list) {
-        if (plural2singular[value] == null) {
-          plural2singular[value] = <String>[key];
+        if (_plural2singular[value] == null) {
+          _plural2singular[value] = <String>[key];
         }
       }
     });

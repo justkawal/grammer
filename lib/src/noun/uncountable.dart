@@ -1,6 +1,6 @@
 part of grammer;
 
-const uncountables = <String>[
+const _uncountables = <String>[
   'abdomen',
   'access',
   'accommodation',

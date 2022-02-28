@@ -1,6 +1,6 @@
 part of grammer;
 
-String? strip(String verb) {
+String? _strip(String verb) {
   final verbLookUp = VerbLookup.instance;
   if (verb.length < 2) {
     return null;
@@ -9,11 +9,11 @@ String? strip(String verb) {
   if (verbLookUp.lookup(verb).isNotEmpty) {
     return verb;
   } else {
-    return strip(verb);
+    return _strip(verb);
   }
 }
 
-String rebuild(String original, String stripped, String conjugated) {
+String _rebuild(String original, String stripped, String conjugated) {
   var rebuilt =
       original.substring(0, original.indexOf(stripped) + stripped.length);
   rebuilt = original.split(stripped).join(conjugated);

@@ -14,10 +14,10 @@ class _Pattern {
 List<String> _toPlural(String word) {
   if (_isPlural(word)) {
     return <String>[word];
-  } else if (_Exceptions.instance.singular2plural[word] != null) {
-    return <String>[..._Exceptions.instance.singular2plural[word]!];
+  } else if (_Exceptions.instance._singular2plural[word] != null) {
+    return <String>[..._Exceptions.instance._singular2plural[word]!];
   }
-  for (var map in toPluralPattern) {
+  for (var map in _toPluralPattern) {
     final pattern = _Pattern(map);
     if (pattern.regexp.hasMatch(word)) {
       return <String>[
@@ -31,8 +31,8 @@ List<String> _toPlural(String word) {
 String _toSingular(String word) {
   if (_isSingular(word)) {
     return word;
-  } else if (_Exceptions.instance.plural2singular[word] != null) {
-    return _Exceptions.instance.plural2singular[word]![0];
+  } else if (_Exceptions.instance._plural2singular[word] != null) {
+    return _Exceptions.instance._plural2singular[word]![0];
   }
   for (var map in toSingularPattern) {
     final pattern = _Pattern(map);
