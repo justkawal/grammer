@@ -41,7 +41,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  grammer: ^1.0.1
+  grammer: ^1.0.2
 ```
 
 ### 2. Import it
@@ -49,7 +49,7 @@ dependencies:
 Now in your `Dart` code, you can use: 
 
 ```dart
-    import 'package:grammer/grammer.dart';
+  import 'package:grammer/grammer.dart';
 ```
 
 ## Usage
@@ -67,7 +67,7 @@ instance.superlative(); // biggest
  Grammer('fly').conjugate('VBD'); // flew
  Grammer('throw').conjugate('VBN'); // thrown
  Grammer('rally').conjugate('VBS'); // rallies
- Grammer('die').conjugate('VBP'); // dying
+ Grammer('die').conjugate('VBG'); // dying
 
 // or you can use the aliases
  Grammer('rallied').toPresent(); // rally
@@ -107,7 +107,7 @@ grammerB.toSingular(); // ellipsis
 grammerC.toSingular(); // money (no change)
 
 
-grammerA.toPlural(); // buses
+grammerA.toPlural(); // [busses, buses]
 grammerB.toPlural(); // ellipses (no change)
 grammerC.toPlural(); // money (no change)
 
@@ -148,7 +148,7 @@ I've used a set of rules (for detection/transformation) in combination with an e
 
 However, testing the library was more challenging than anticipated. If you have any case inaccuracy or false positives **please** submit an issue.
 
-And of course, You can clone this repository, install `grammer` and test it for yourself, and you'll see how it passes the **9900** tests successfully.
+And of course, You can clone this repository, install `grammer` and test it (`dart test`) for yourself, and you'll see how it passes the **9900** tests successfully.
 
 
 ## License

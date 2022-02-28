@@ -1,8 +1,8 @@
 name: grammer
 description: A library to process noun (plural to singular and singular to plural), verb (gerund, present & past) and adjective (comparative, superlative) transformations.
 
-version: 1.0.1
-homepage: https://www.github.com/justkawal/grammer
+version: 1.0.2
+homepage: https://github.com/justkawal/grammer
 
 environment:
   sdk: '>=2.15.1 <3.0.0'
