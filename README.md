@@ -148,7 +148,7 @@ I've used a set of rules (for detection/transformation) in combination with an e
 
 However, testing the library was more challenging than anticipated. If you have any case inaccuracy or false positives **please** submit an issue.
 
-And of course, You can clone this repository, install `mocha` and test it for yourself, and you'll see how it passes the **9900** tests successfully.
+And of course, You can clone this repository, install `grammer` and test it for yourself, and you'll see how it passes the **9900** tests successfully.
 
 
 ## License
