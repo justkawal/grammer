@@ -32,7 +32,7 @@ A library to process noun (plural to singular and singular to plural), verb (ger
   <br>
   <br>
 
-#### This library is [MIT](https://github.com/justkawal/grammer/blob/main/LICENSE) licensed. So, it's free to use anytime, anywhere without any consent, because Open Source is love ❤️.
+#### This library is [MIT](https://github.com/justkawal/grammer/blob/main/LICENSE) licensed. So, it's free to use anytime, anywhere without any consent.
 
 # Lets Get Started
 
