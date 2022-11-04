@@ -5,8 +5,8 @@ int _syllablesNum(String str) =>
 
 abstract class _AdjectiveRules {
   bool test(String word);
-  String comp(String word) => 'more ' + word;
-  String supr(String word) => 'most ' + word;
+  String comp(String word) => 'more $word';
+  String supr(String word) => 'most $word';
 }
 
 class _AdjectiveRule1 extends _AdjectiveRules {
@@ -35,11 +35,11 @@ class _AdjectiveRule4 extends _AdjectiveRules {
 
   @override
   String comp(String word) => word.replaceAllMapped(
-      RegExp(r'([^aeiouy])$'), (Match m) => "${m[1]}${m[1]}er");
+      RegExp(r'([^aeiouy])$'), (Match m) => '${m[1]}${m[1]}er');
 
   @override
   String supr(String word) => word.replaceAllMapped(
-      RegExp(r'([^aeiouy])$'), (Match m) => "${m[1]}${m[1]}est");
+      RegExp(r'([^aeiouy])$'), (Match m) => '${m[1]}${m[1]}est');
 }
 
 class _AdjectiveRule5 extends _AdjectiveRules {
@@ -64,9 +64,9 @@ class _AdjectiveRule7 extends _AdjectiveRules {
   @override
   bool test(String word) => true;
   @override
-  String comp(String word) => word + 'er';
+  String comp(String word) => '${word}er';
   @override
-  String supr(String word) => word + 'est';
+  String supr(String word) => '${word}est';
 }
 
 final _adjectiveRules = <_AdjectiveRules>[

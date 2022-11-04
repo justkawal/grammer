@@ -6,6 +6,9 @@ import 'package:stemmer/stemmer.dart';
 // src
 part 'src/grammer_base.dart';
 
+// extensions
+part 'src/extensions/extensions.dart';
+
 // Adjectives
 part 'src/adjective/irregulars.dart';
 part 'src/adjective/adjective_rules.dart';

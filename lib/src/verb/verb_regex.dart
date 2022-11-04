@@ -12,9 +12,15 @@ class _VerbRule1 extends _VerbRules {
 
   @override
   String transform(String vb, String to) {
-    if (to == "VBZ") return vb + 's';
-    if (to == "VBG") return vb + 'ing';
-    if (to == "VBN" || to == "VBD") return vb + 'ed';
+    if (to == 'VBZ') {
+      return '${vb}s';
+    }
+    if (to == 'VBG') {
+      return '${vb}ing';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '${vb}ed';
+    }
     return vb;
   }
 }
@@ -26,9 +32,13 @@ class _VerbRule2 extends _VerbRules {
   @override
   String transform(String vb, String to) {
     var base = vb.substring(0, vb.length - 1);
-    if (to == "VBZ") return base + 'ies';
-    if (to == "VBG") return vb + 'ing';
-    if (to == "VBN" || to == "VBD") return base + 'ied';
+    if (to == 'VBZ') return '${base}ies';
+    if (to == 'VBG') {
+      return '${vb}ing';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '${base}ied';
+    }
     return vb;
   }
 }
@@ -40,9 +50,15 @@ class _VerbRule3 extends _VerbRules {
   @override
   String transform(String vb, String to) {
     var base = vb.substring(0, vb.length - 1);
-    if (to == "VBZ") return vb + 's';
-    if (to == "VBG") return base + 'ing';
-    if (to == "VBN" || to == "VBD") return base + 'ed';
+    if (to == 'VBZ') {
+      return '${vb}s';
+    }
+    if (to == 'VBG') {
+      return '${base}ing';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '${base}ed';
+    }
     return vb;
   }
 }
@@ -54,9 +70,15 @@ class _VerbRule4 extends _VerbRules {
 
   @override
   String transform(String vb, String to) {
-    if (to == "VBZ") return vb + 's';
-    if (to == "VBG") return vb + vb[vb.length - 1] + 'ing';
-    if (to == "VBN" || to == "VBD") return vb + vb[vb.length - 1] + 'ed';
+    if (to == 'VBZ') {
+      return '${vb}s';
+    }
+    if (to == 'VBG') {
+      return '$vb${vb[vb.length - 1]}ing';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '$vb${vb[vb.length - 1]}ed';
+    }
     return vb;
   }
 }
@@ -68,9 +90,15 @@ class _VerbRule5 extends _VerbRules {
 
   @override
   String transform(String vb, String to) {
-    if (to == "VBZ") return vb + 'es';
-    if (to == "VBG") return vb + 'ing';
-    if (to == "VBN" || to == "VBD") return vb + 'ed';
+    if (to == 'VBZ') {
+      return '${vb}es';
+    }
+    if (to == 'VBG') {
+      return '${vb}ing';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '${vb}ed';
+    }
     return vb;
   }
 }
@@ -81,9 +109,15 @@ class _VerbRule6 extends _VerbRules {
 
   @override
   String transform(String vb, String to) {
-    if (to == "VBZ") return vb + 's';
-    if (to == "VBG") return vb + 'ing';
-    if (to == "VBN" || to == "VBD") return vb + 'd';
+    if (to == 'VBZ') {
+      return '${vb}s';
+    }
+    if (to == 'VBG') {
+      return '${vb}ing';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '${vb}d';
+    }
     return vb;
   }
 }
@@ -94,9 +128,15 @@ class _VerbRule7 extends _VerbRules {
 
   @override
   String transform(String vb, String to) {
-    if (to == "VBZ") return vb + 's';
-    if (to == "VBG") return vb.substring(0, vb.length - 2) + 'ying';
-    if (to == "VBN" || to == "VBD") return vb + 'd';
+    if (to == 'VBZ') {
+      return '${vb}s';
+    }
+    if (to == 'VBG') {
+      return '${vb.substring(0, vb.length - 2)}ying';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '${vb}d';
+    }
     return vb;
   }
 }
@@ -107,9 +147,15 @@ class _VerbRule8 extends _VerbRules {
 
   @override
   String transform(String vb, String to) {
-    if (to == "VBZ") return vb + 's';
-    if (to == "VBG") return vb.substring(0, vb.length - 1) + 'ing';
-    if (to == "VBN" || to == "VBD") return vb + 'd';
+    if (to == 'VBZ') {
+      return '${vb}s';
+    }
+    if (to == 'VBG') {
+      return '${vb.substring(0, vb.length - 1)}ing';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '${vb}d';
+    }
     return vb;
   }
 }
@@ -120,9 +166,15 @@ class _VerbRule9 extends _VerbRules {
 
   @override
   String transform(String vb, String to) {
-    if (to == "VBZ") return vb + 's';
-    if (to == "VBG") return vb + 'ing';
-    if (to == "VBN" || to == "VBD") return vb + 'ed';
+    if (to == 'VBZ') {
+      return '${vb}s';
+    }
+    if (to == 'VBG') {
+      return '${vb}ing';
+    }
+    if (to == 'VBN' || to == 'VBD') {
+      return '${vb}ed';
+    }
     return vb;
   }
 }
