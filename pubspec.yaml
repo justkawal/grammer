@@ -5,7 +5,7 @@ version: 1.0.3
 homepage: https://github.com/justkawal/grammer
 
 environment:
-  sdk: '>=2.18.0 <3.3.6'
+  sdk: '>=2.18.0 <3.0.0'
 
 dependencies:
   stemmer: ^2.2.0
